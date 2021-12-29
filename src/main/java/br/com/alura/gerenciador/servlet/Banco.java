@@ -9,4 +9,8 @@ public class Banco {
 		lista.add(empresa);
 	}
 	
+	public List<Empresa> getEmpresas() {
+		return Banco.lista;
+	}
+	
 }
