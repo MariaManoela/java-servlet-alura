@@ -13,8 +13,8 @@ public class Empresa {
 	public String getNome() {
 		return nome;
 	}
-	public void setNome(String nomeEmpresa) {
-		this.nome = nomeEmpresa;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	
 }
