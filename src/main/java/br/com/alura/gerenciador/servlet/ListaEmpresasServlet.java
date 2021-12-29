@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class ListaEmpresasServlet
- */
 @WebServlet("/listaEmpresas")
 public class ListaEmpresasServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -27,7 +24,7 @@ public class ListaEmpresasServlet extends HttpServlet {
 		out.println("<html><body>");
 		out.println("<ul>");
 		for (Empresa empresa : lista) {
-			out.println("<li>" + empresa.getNome() + "</li");
+			out.println("<li>" + empresa.getNome() + "</li>");
 		}
 		out.println("</ul>");
 		out.println("</body></html>");
