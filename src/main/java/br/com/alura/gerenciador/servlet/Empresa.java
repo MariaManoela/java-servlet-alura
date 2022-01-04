@@ -7,7 +7,7 @@ public class Empresa {
 	private String nome;
 	private Date dataAbertura = new Date();
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
