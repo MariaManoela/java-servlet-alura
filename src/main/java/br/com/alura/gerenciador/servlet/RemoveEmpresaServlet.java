@@ -18,6 +18,9 @@ public class RemoveEmpresaServlet extends HttpServlet {
 		Integer id = Integer.valueOf(paramId);
 		
 		System.out.println(id);
+		
+		Banco banco = new Banco();
+		banco.removeEmpresa(id);
 	}
 
 }
