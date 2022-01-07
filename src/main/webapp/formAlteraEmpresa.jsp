@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 	<body>
-		<form action="${linkServletNovaEmpresa}" method="post">
+		<form action="${linkServletAlteraEmpresa}" method="post">
 			Nome: <input type="text" name="nome" value="${empresa.nome }"/>
 			Data Abertura: <input type="text" name="data" value="<fmt:formatDate value="${empresa.dataAbertura }" pattern="dd/MM/yyyy"/>"/>
 			<input type="text" name="id" value="${empresa.id}" }/>
