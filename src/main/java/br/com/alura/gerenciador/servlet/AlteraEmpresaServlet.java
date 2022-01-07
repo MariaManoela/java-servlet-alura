@@ -33,6 +33,11 @@ public class AlteraEmpresaServlet extends HttpServlet {
 		}
 		
 		System.out.println(id);
+		
+		Banco banco = new Banco();
+		Empresa empresa = banco.buscaEmpresaPeloId(id);
+		empresa.setNome(nomeEmpresa);
+		empresa.setDataAbertura(dataAbertura);
 	}
 
 }
