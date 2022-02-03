@@ -17,7 +17,7 @@ public class UnicaEntradaServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String paramAcao = request.getParameter("acao");
 		
-		if(paramAcao.equals("ListaEmpresa")) {
+		if(paramAcao.equals("ListaEmpresas")) {
 			System.out.println("listando empresa");
 			
 			ListaEmpresas acao = new ListaEmpresas();
