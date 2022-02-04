@@ -29,7 +29,7 @@ public class UnicaEntradaServlet extends HttpServlet {
 					
 		} else if(paramAcao.equals("RemoveEmpresa" )) {
 			RemoveEmpresa acao = new RemoveEmpresa();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 			
 			
 		} else if(paramAcao.equals("MostraEmpresa")) {
@@ -46,9 +46,14 @@ public class UnicaEntradaServlet extends HttpServlet {
 			NovaEmpresa acao = new NovaEmpresa();
 			acao.executa(request, response);
 		}
+		
+		String[] tipoEndereco = nome.split(":");
 
-		RequestDispatcher rd = request.getRequestDispatcher(nome);
-		rd.forward(request, response);
+		if(tipoEndereco[0].equals("forward")) {
+			RequestDispatcher rd = request.getRequestDispatcher(tipoEndereco[1]);
+			rd.forward(request, response);
+		} else {
+			response.sendRedirect(tipoEndereco[1]);
+		}
 	}
-
 }
