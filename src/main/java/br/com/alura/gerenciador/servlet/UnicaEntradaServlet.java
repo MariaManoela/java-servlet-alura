@@ -27,9 +27,14 @@ public class UnicaEntradaServlet extends HttpServlet {
 		
 		String nomeDaClasse = "br.com.alura.gerenciador.acao." + paramAcao;
 		
-		Class classe = Class.forName(nomeDaClasse); //carrega a classe com o nome
-		Acao acao = (Acao) classe.newInstance();
-		String nome = acao.executa(request, response);
+		String nome;
+		try {
+			Class classe = Class.forName(nomeDaClasse); //carrega a classe com o nome
+			Acao acao = (Acao) classe.newInstance();
+			nome = acao.executa(request, response);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | ServletException| IOException e) {
+			throw new ServletException(e);
+		}
 		
 		String[] tipoEndereco = nome.split(":");
 		if(tipoEndereco[0].equals("forward")) {
