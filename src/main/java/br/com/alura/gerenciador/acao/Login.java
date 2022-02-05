@@ -11,7 +11,12 @@ public class Login implements Acao {
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		return null;
+		
+		String login = request.getParameter("login");
+		String senha = request.getParameter("senha");
+		
+		System.out.println("Logando " + login);
+		
+		return "redirect:entrada?acao=ListaEmpresas";
 	}
-
 }
