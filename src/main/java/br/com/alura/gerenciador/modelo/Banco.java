@@ -19,7 +19,14 @@ public class Banco {
 		lista.add(empresa);
 		lista.add(empresa2);
 		
-		
+		Usuario u1 = new Usuario();
+		u1.setLogin("Manu");
+		u1.setSenha("123");
+		Usuario u2 = new Usuario();
+		u2.setLogin("Ana");
+		u2.setSenha("123");
+		listaUsuarios.add(u1);
+		listaUsuarios.add(u2);
 	}
 
 	public void adiciona(Empresa empresa) {
