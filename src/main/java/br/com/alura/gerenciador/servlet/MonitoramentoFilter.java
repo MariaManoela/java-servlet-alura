@@ -18,11 +18,13 @@ public class MonitoramentoFilter implements Filter{
 		
 		long antes = System.currentTimeMillis();
 		
+		String acao = request.getParameter("acao");
+		
 		//executa a acao
 		chain.doFilter(request, response);
 		
 		long depois = System.currentTimeMillis();
-		System.out.println("Tempo de execução: " + (depois - antes));
+		System.out.println("Tempo de execução da ação " + acao + "-> " + (depois - antes));
 	}
 	
 }
