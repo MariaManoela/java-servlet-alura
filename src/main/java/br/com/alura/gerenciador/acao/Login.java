@@ -25,6 +25,7 @@ public class Login implements Acao {
 		
 		if(usuario != null) {
 			System.out.println("Usuário existe!");
+			request.setAttribute("usuarioLogado", usuario);
 			return "redirect:entrada?acao=ListaEmpresas";
 		} else {
 			return "redirect:entrada?acao=LoginForm";
