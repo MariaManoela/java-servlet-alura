@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
+
 import br.com.alura.gerenciador.modelo.Banco;
 import br.com.alura.gerenciador.modelo.Empresa;
 
@@ -22,6 +24,9 @@ public class EmpresasService extends HttpServlet {
 		
 		Gson gson = new Gson();
 		String json = gson.toJson(empresas);
+		
+		response.setContentType("application/json");
+		response.getWriter().print(json);
 	}
 
 }
